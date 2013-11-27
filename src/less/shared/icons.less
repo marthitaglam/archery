@@ -1,0 +1,524 @@
+/* Custom Icons -------------------------- */
+// We are using our own custom icon library.
+// Since icons are fonts, they can be placed anywhere text is placed and are
+// thus automatically sized to match the surrounding child. To use, create an
+// inline element with the appropriate classes, like so:
+// <a href="#"><span class="glyphicon glyphicon-star"></span> Star</a>
+/* ------------------------------------------ */
+
+// Import the fonts
+@font-face {
+  font-family: 'icons';
+  src: url('@{icon-font-path}@{icon-font-name}.eot');
+  src: url('@{icon-font-path}@{icon-font-name}.eot?#iefix') format('embedded-opentype'),
+       url('@{icon-font-path}@{icon-font-name}.woff') format('woff'),
+       url('@{icon-font-path}@{icon-font-name}.ttf') format('truetype'),
+       url('@{icon-font-path}@{icon-font-name}.svg#glyphicons_halflingsregular') format('svg');
+}
+
+
+
+
+
+// Bootstrap Overrides
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+    font-family:"icons";
+    display:inline-block;
+    font-weight:normal;
+    font-style:normal;
+    speak:none;
+    text-decoration:inherit;
+    text-transform:none;
+    text-rendering:optimizeLegibility;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+}
+
+// Mixins
+
+.icon-advisory-board,
+.icon-approve-checkmark,
+.icon-arrow-bold-down,
+.icon-arrow-bold-left,
+.icon-arrow-bold-right,
+.icon-arrow-bold-up,
+.icon-arrow-down,
+.icon-arrow-left,
+.icon-arrow-right,
+.icon-arrow-rounded-down,
+.icon-arrow-rounded-left,
+.icon-arrow-rounded-right,
+.icon-arrow-rounded-up,
+.icon-arrow-thin-down,
+.icon-arrow-thin-left,
+.icon-arrow-thin-right,
+.icon-arrow-thin-up,
+.icon-arrow-triangle-down,
+.icon-arrow-triangle-left,
+.icon-arrow-triangle-right,
+.icon-arrow-triangle-up,
+.icon-arrow-up,
+.icon-breadcrumb-arrow,
+.icon-bullseye-bubble,
+.icon-cms-add-new,
+.icon-cms-edit,
+.icon-cms-grab-handle-3,
+.icon-cms-grab-handle,
+.icon-cms-remove-disable,
+.icon-cms-trash,
+.icon-compare-graph,
+.icon-compare,
+.icon-cost,
+.icon-doctors,
+.icon-document,
+.icon-favorite,
+.icon-file-pdf,
+.icon-health-cross-circle,
+.icon-health-cross,
+.icon-help,
+.icon-info,
+.icon-learn,
+.icon-list-table,
+.icon-lock-locked,
+.icon-lock-unlocked,
+.icon-mail,
+.icon-main-nav-1,
+.icon-main-nav,
+.icon-medical-advisory-board,
+.icon-no-x-disable,
+.icon-no-x,
+.icon-people,
+.icon-person,
+.icon-preview,
+.icon-question,
+.icon-resource,
+.icon-resources,
+.icon-row-collapse,
+.icon-row-expand,
+.icon-search-a,
+.icon-share,
+.icon-square-about,
+.icon-square-share,
+.icon-stats-graph,
+.icon-treatment-category-injections,
+.icon-treatment-category-lifestyle,
+.icon-treatment-category-other,
+.icon-treatment-category-therapies,
+.icon-treatment-equipment,
+.icon-treatment-otc,
+.icon-treatment-prescriptions,
+.icon-treatment-surgery,
+.icon-treatments-bullseye,
+.icon-treatments-explore,
+.icon-treatments-personalize,
+.icon-wiserhealth-logo,
+.icon-x-checkbox,
+.icon-x-close,
+.icon-yes-check {
+    &:before {
+        font-family:"icons";
+        display:inline-block;
+        font-weight:normal;
+        font-style:normal;
+        text-decoration:inherit;
+    }
+}
+
+
+// Mixins
+.icon-advisory-board {
+    &:before {
+        content:"\f100";
+    }
+}
+.icon-approve-checkmark {
+    &:before {
+        content:"\f101";
+    }
+}
+.icon-arrow-bold-down {
+    &:before {
+        content:"\f102";
+    }
+}
+.icon-arrow-bold-left {
+    &:before {
+        content:"\f103";
+    }
+}
+.icon-arrow-bold-right {
+    &:before {
+        content:"\f104";
+    }
+}
+.icon-arrow-bold-up {
+    &:before {
+        content:"\f105";
+    }
+}
+.icon-arrow-down {
+    &:before {
+        content:"\f106";
+    }
+}
+.icon-arrow-left {
+    &:before {
+        content:"\f107";
+    }
+}
+.icon-arrow-right {
+    &:before {
+        content:"\f108";
+    }
+}
+.icon-arrow-rounded-down {
+    &:before {
+        content:"\f109";
+    }
+}
+.icon-arrow-rounded-left {
+    &:before {
+        content:"\f10a";
+    }
+}
+.icon-arrow-rounded-right {
+    &:before {
+        content:"\f10b";
+    }
+}
+.icon-arrow-rounded-up {
+    &:before {
+        content:"\f10c";
+    }
+}
+.icon-arrow-thin-down {
+    &:before {
+        content:"\f10d";
+    }
+}
+.icon-arrow-thin-left {
+    &:before {
+        content:"\f10e";
+    }
+}
+.icon-arrow-thin-right {
+    &:before {
+        content:"\f10f";
+    }
+}
+.icon-arrow-thin-up {
+    &:before {
+        content:"\f110";
+    }
+}
+.icon-arrow-triangle-down {
+    &:before {
+        content:"\f111";
+    }
+}
+.icon-arrow-triangle-left {
+    &:before {
+        content:"\f112";
+    }
+}
+.icon-arrow-triangle-right {
+    &:before {
+        content:"\f113";
+    }
+}
+.icon-arrow-triangle-up {
+    &:before {
+        content:"\f114";
+    }
+}
+.icon-arrow-up {
+    &:before {
+        content:"\f115";
+    }
+}
+.icon-breadcrumb-arrow {
+    &:before {
+        content:"\f116";
+    }
+}
+.icon-bullseye-bubble {
+    &:before {
+        content:"\f117";
+    }
+}
+.icon-cms-add-new {
+    &:before {
+        content:"\f118";
+    }
+}
+.icon-cms-edit {
+    &:before {
+        content:"\f119";
+    }
+}
+.icon-cms-grab-handle-3 {
+    &:before {
+        content:"\f11a";
+    }
+}
+.icon-cms-grab-handle {
+    &:before {
+        content:"\f11b";
+    }
+}
+.icon-cms-remove-disable {
+    &:before {
+        content:"\f11c";
+    }
+}
+.icon-cms-trash {
+    &:before {
+        content:"\f11d";
+    }
+}
+.icon-compare-graph {
+    &:before {
+        content:"\f11e";
+    }
+}
+.icon-compare {
+    &:before {
+        content:"\f11f";
+    }
+}
+.icon-cost {
+    &:before {
+        content:"\f120";
+    }
+}
+.icon-doctors {
+    &:before {
+        content:"\f121";
+    }
+}
+.icon-document {
+    &:before {
+        content:"\f122";
+    }
+}
+.icon-favorite {
+    &:before {
+        content:"\f123";
+    }
+}
+.icon-file-pdf {
+    &:before {
+        content:"\f124";
+    }
+}
+.icon-health-cross-circle {
+    &:before {
+        content:"\f125";
+    }
+}
+.icon-health-cross {
+    &:before {
+        content:"\f126";
+    }
+}
+.icon-help {
+    &:before {
+        content:"\f127";
+    }
+}
+.icon-info {
+    &:before {
+        content:"\f128";
+    }
+}
+.icon-learn {
+    &:before {
+        content:"\f129";
+    }
+}
+.icon-list-table {
+    &:before {
+        content:"\f12a";
+    }
+}
+.icon-lock-locked {
+    &:before {
+        content:"\f12b";
+    }
+}
+.icon-lock-unlocked {
+    &:before {
+        content:"\f12c";
+    }
+}
+.icon-mail {
+    &:before {
+        content:"\f12d";
+    }
+}
+.icon-main-nav-1 {
+    &:before {
+        content:"\f12e";
+    }
+}
+.icon-main-nav {
+    &:before {
+        content:"\f12f";
+    }
+}
+.icon-medical-advisory-board {
+    &:before {
+        content:"\f130";
+    }
+}
+.icon-no-x-disable {
+    &:before {
+        content:"\f131";
+    }
+}
+.icon-no-x {
+    &:before {
+        content:"\f132";
+    }
+}
+.icon-people {
+    &:before {
+        content:"\f133";
+    }
+}
+.icon-person {
+    &:before {
+        content:"\f134";
+    }
+}
+.icon-preview {
+    &:before {
+        content:"\f135";
+    }
+}
+.icon-question {
+    &:before {
+        content:"\f136";
+    }
+}
+.icon-resource {
+    &:before {
+        content:"\f137";
+    }
+}
+.icon-resources {
+    &:before {
+        content:"\f138";
+    }
+}
+.icon-row-collapse {
+    &:before {
+        content:"\f139";
+    }
+}
+.icon-row-expand {
+    &:before {
+        content:"\f13a";
+    }
+}
+.icon-search-a {
+    &:before {
+        content:"\f13b";
+    }
+}
+.icon-share {
+    &:before {
+        content:"\f13c";
+    }
+}
+.icon-square-about {
+    &:before {
+        content:"\f13d";
+    }
+}
+.icon-square-share {
+    &:before {
+        content:"\f13e";
+    }
+}
+.icon-stats-graph {
+    &:before {
+        content:"\f13f";
+    }
+}
+.icon-treatment-category-injections {
+    &:before {
+        content:"\f140";
+    }
+}
+.icon-treatment-category-lifestyle {
+    &:before {
+        content:"\f141";
+    }
+}
+.icon-treatment-category-other {
+    &:before {
+        content:"\f142";
+    }
+}
+.icon-treatment-category-therapies {
+    &:before {
+        content:"\f143";
+    }
+}
+.icon-treatment-equipment {
+    &:before {
+        content:"\f144";
+    }
+}
+.icon-treatment-otc {
+    &:before {
+        content:"\f145";
+    }
+}
+.icon-treatment-prescriptions {
+    &:before {
+        content:"\f146";
+    }
+}
+.icon-treatment-surgery {
+    &:before {
+        content:"\f147";
+    }
+}
+.icon-treatments-bullseye {
+    &:before {
+        content:"\f148";
+    }
+}
+.icon-treatments-explore {
+    &:before {
+        content:"\f149";
+    }
+}
+.icon-treatments-personalize {
+    &:before {
+        content:"\f14a";
+    }
+}
+.icon-wiserhealth-logo {
+    &:before {
+        content:"\f14b";
+    }
+}
+.icon-x-checkbox {
+    &:before {
+        content:"\f14c";
+    }
+}
+.icon-x-close {
+    &:before {
+        content:"\f14d";
+    }
+}
+.icon-yes-check {
+    &:before {
+        content:"\f14e";
+    }
+}
