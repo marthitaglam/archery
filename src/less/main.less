@@ -32,46 +32,46 @@
 /* ------------------------------------------ */
 
 // Variables for all our projects
-@import "shared/global_variables.less"
+@import "shared/global_variables.less";
 
 // Basic Reset for pages
-@import "shared/global_reset.less"
+@import "shared/global_reset.less";
 
 // Mixins to be shared across the entire site
-@import "shared/global_mixins.less"
+@import "shared/global_mixins.less";
 
 // Our Iconography library
-@import "shared/icons.less"
+@import "shared/icons.less";
 
 // Fallback Mixins, for inconsistent browser supports, e.g., border-radius
-@import "shared/fallback_mixins.less"
+@import "shared/fallback_mixins.less";
 
 // Fallback Reset for MSIE 7 and 8
-@import "ie_7_8_reset.less"
+//@import "shared/ie_7_8_reset.less";
 /* ------------------------------------------ */
 
 /* Bootstrap -------------------------------- */
 /* ------------------------------------------ */
 
 // this file replaces the original bootstrap.less in Bootstrap
-@import "bootstrap/bootstrap.less"
+@import "../components/bootstrap/less/bootstrap.less";
 /* ------------------------------------------ */
 
 /* Bootstrap Overrides ---------------------- */
 /* ------------------------------------------ */
 
 // Core variables and mixins
-@import "bootstrap/variables.less";
-@import "bootstrap/mixins.less";
+@import "../components/bootstrap/less/variables.less";
+@import "../components/bootstrap/less/mixins.less";
 
 // Reset
-@import "bootstrap/normalize.less";
+@import "../components/bootstrap/less/normalize.less";
 
 // Core CSS
-@import "bootstrap/grid.less";
+@import "../components/bootstrap/less/grid.less";
 
 // Components
-@import "bootstrap/dropdowns.less";
+@import "../components/bootstrap/less/dropdowns.less";
 
 // Components w/ JavaScript
 // no overrides currently
@@ -84,19 +84,19 @@
 /* ------------------------------------------ */
 
 // Global Navigation
-@import "shared/components/navigation.less"
+@import "shared/components/navigation.less";
 
 // Global Footer
-@import "shared/components/footer.less"
+@import "shared/components/footer.less";
 /* ------------------------------------------ */
 
 /* Project-Specific Styling ----------------- */
 /* ------------------------------------------ */
 
 // Humanization
-@import "projects/humanization/imports.less"
+@import "projects/humanization/imports.less";
 
 // Personalization (i.e. Bullseye)
-@import "projects/personalizatoin/imports.less"
+@import "projects/personalization/imports.less";
 /* ------------------------------------------ */
 

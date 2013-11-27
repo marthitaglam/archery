@@ -1,0 +1,32 @@
+node_js:
+- '0.8'
+- '0.10'
+before_script:
+- npm install
+- bower install
+script:
+- grunt
+notifications:
+  email: true
+  hipchat:
+    rooms:
+      secure: L2byMsETBZwU5OZc3v0xbJFgXOThWUGp9F1mTYVL0DGmEKX/TyUPl8/tMS9eFjvw1EGaUBkHnh9DrpdSA/Lb5qjx4bAddzD1QoFH0zU1SMP0GQWib+5PIfYpZ2GNt92gbvBFfMJhHkHEmwX7F/MK/nwdTTHz6qpDZgCUklYSMIY=
+    template:
+    - '%{repository} was just deployed for %{branch} - %{commit} : %{author} to <a
+      href="http://dev.wsrcdn.net/%{repository}/%{build_number}/index.html">http://dev.wsrcdn.net/%{repository}/%{build_number}/index.html</a>.'
+    format: html
+before_deploy: git clone https://github.com/travis-ci/dpl.git && cd dpl && gem build
+  dpl.gemspec && gem install *.gem && cd ../
+deploy:
+  provider: s3
+  access_key_id: AKIAJ27P4M672NMLD5WQ
+  secret_access_key:
+    secure: L396i8wF42nlznWefVAEQbCvY1s9YrGFKkD+kI+fjjQQ3gqdlbGKYBd8bJE++SbkCkxd1/sL47gPbAQS1jMW2biTzPOL/9mpck/XOiofDE+Uz79Ij1Z1m8D+1SuUTny9Eo1IeHl3uKG337tQvU6+wV5heg9qmotDRgbR2nOQNLo=
+  bucket: dev.wsrcdn.net
+  local_dir: build
+  upload_dir: $TRAVIS_REPO_SLUG/$TRAVIS_BUILD_NUMBER
+  skip_cleanup: true
+  on:
+    repo: $TRAVIS_REPO_SLUG
+    all_branches: true
+after_deploy: 'echo DEPLOYED TO: http://dev.wsrcdn.net/$TRAVIS_REPO_SLUG/$TRAVIS_BUILD_NUMBER/index.html'

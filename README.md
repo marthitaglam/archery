@@ -50,7 +50,35 @@ git reset --hard origin/master
 git checkout -b new_branch_name
 ```
 
-Make changes to files within your branch and then
+Now you need to setup archery dependencies
+
+```
+sudo npm install
+bower install
+```
+
+After that completes successfully, you will need to validate everything by building
+
+```
+grunt
+```
+
+This should create a structure similar to the one below in your /build folder
+
+```
+├── 404.html
+├── css
+│   └── ea2dd69f.main.css
+├── favicon.ico
+├── fonts
+│   ├── 34c4b822.icons-9ee82a68db663a88e273228cd7483d91.eot
+│   ├── 88358660.icons-9ee82a68db663a88e273228cd7483d91.ttf
+│   └── f86b6b62.icons-9ee82a68db663a88e273228cd7483d91.svg
+├── index.html
+└── robots.txt
+```
+
+Now you may make changes to files within your branch and then
 
 ```
 git commit -a -m "Commit message that reflects the work you did"
