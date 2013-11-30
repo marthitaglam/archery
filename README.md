@@ -85,7 +85,27 @@ And now run grunt in your project to build the new design assets
 grunt
 ```
 
-Finally, safely remove legacy design assets from your project repo.
+When adding archery to new projects, the design assets from the project must be moved into the archery repo. Project specific design assets must be placed within a folder named for the project within the 'projects' folder
+
+```
+in the archery checkout:
+src/less/projects
+```
+
+Inside the project specific folder in the archery checkout, add an imports.less file that includes imports to all of the project specific imports.
+
+Then, add the project specific imports.less to the main.less under the projects section in the archery checkout.
+
+```
+in the archery checkout:
+src/less/main.less
+```
+
+Finally, safely remove legacy design assets from your project repo and build the new design assets
+
+```
+grunt
+```
 
 ## Updating code in archery
 
@@ -170,5 +190,12 @@ Archery, while using submodules for local development, will deploy as a stand al
 
 The "/build" folder in archery, that is created by grunt, will be deployed to both the dev cnd and the production cdn. This will enable deployment of css independent of application code.
 
+Archery will deploy, on every commit in every branch, to the dev CDN at dev.wsrcdn.net.  Monitor the Travis-ci builds for urls to each commit.
+
+Archery will deploy, on every tag creation, to the production CDN at b.wsrcdn.net.
+TODO: determine how to deal with updating the mwh.com html with the new design asset references.
+
 Travis will build and deploy to both of these environments as appropriate.
+
 ## Maintaining archery
+
