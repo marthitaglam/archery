@@ -29,7 +29,63 @@ git commit archery -m "Adding archery submodule"
 git push
 ```
 
-The archery code is now a submodule of your project.
+The archery code is now a submodule of your project. 
+
+Before you can build the design assets in your project, you must build them within the submodule.
+
+```
+cd archery
+npm install
+bower install
+grunt
+cd ..
+```
+
+Now you need to change your Gruntfile.js to reflect the new design asset locations.
+
+Change all occurances of
+```
+<%= paths.app %>/css/
+```
+to
+```
+<%= paths.app %>/archery/src/less
+```
+
+Change all occurances of
+```
+src/css/main.less
+```
+to
+```
+archery/src/less/main.less
+```
+
+Change all occurances of
+```
+img/{,*/}*.{webp,gif}
+```
+to
+```
+archery/src/images/{,*/}*.{webp,gif}
+```
+
+Change all occurances of
+```
+css/fonts/{,*/}*.*
+```
+to
+```
+archery/src/fonts/{,*/}*.*
+```
+
+And now run grunt in your project to build the new design assets
+
+```
+grunt
+```
+
+Finally, safely remove legacy design assets from your project repo.
 
 ## Updating code in archery
 
