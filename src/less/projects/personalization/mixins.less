@@ -23,3 +23,20 @@
         background-color: #C66;
     }
 }
+.match_strength {
+    display: block;
+    width: (@font-size-base * 2);
+    height: (@font-size-base * 2);
+    .rounded_corners(0.4em);
+    border: 0.2em solid #666;
+
+    &.match_strength_strong {
+        background-color: @mwh_color_highlight;
+    }
+    &.match_strength_moderate {
+        background-color: #FFF;
+    }
+    &.match_strength_weak {
+        background-color: #CCC;
+    }
+}

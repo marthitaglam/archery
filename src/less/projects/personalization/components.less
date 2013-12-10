@@ -1,0 +1,31 @@
+/* Components ------------------------------- */
+// This file creates reoccuring pieces on Personalization, that are too small to
+// merit having its own LESS file
+/* ------------------------------------------ */
+
+// Legend Tables
+.personalization_legend {
+
+    h3 {
+        .mixin_font_standard;
+        font-weight: bold;
+    }
+
+    figure {
+        margin: 0 0 @font-size-base 0;
+        clear: both;
+        overflow: auto;
+
+        .evidence_circle, .match_strength {
+            float: left;
+            margin-right: @font-size-base;
+        }
+        figcaption {
+            float: left;
+
+            p {
+                padding-top: (@font-size-base * 0.25);
+            }
+        }
+    }
+}
