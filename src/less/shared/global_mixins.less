@@ -1,5 +1,8 @@
 /* Global Mixins ---------------------------- */
 // This file adds mixin classes that can be shared across all projects
+// A mixin that will be used globally will have the preface, ".mixin_"
+// variables that will be used internally for just this file will have the
+// preface, "@internal_"
 /* ------------------------------------------ */
 
 // resets styling on buttons, thereby giving a flat design
@@ -8,4 +11,31 @@
     border-width: 0;
     padding: 0;
     background-color: transparent;
+}
+
+// standard font size and leading
+@internal_font_standard_leading: (@font-size-base * 1.333333);
+.mixin_font_standard {
+    font-size: (@font-size-base * 1.5);
+    line-height: @internal_font_standard_leading;
+}
+.mixin_font_standard_margin {
+    margin: 0 0 @internal_font_standard_leading 0;
+}
+
+// for subheadings
+@internal_font_subheading_leading: (@font-size-base * 1);
+.mixin_font_subheading {
+    font-size: (@font-size-base * 2);
+    line-height: @internal_font_subheading_leading;
+    margin: 0 0 @internal_font_subheading_leading 0;
+}
+// for smaller text such as notes, annotations, table entries
+@internal_font_subtext_leading: (@font-size-base * 1.25);
+.mixin_font_subtext {
+    font-size: (@font-size-base * 1.2);
+    line-height: @internal_font_subtext_leading;
+}
+.mixin_font_standard_subtext {
+    margin: 0 0 @internal_font_subtext_leading 0;
 }

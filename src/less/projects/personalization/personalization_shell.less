@@ -4,6 +4,8 @@
 /* ------------------------------------------ */
 
 .personalization[role="main"] {
+    clear: both;
+
     > header {
         padding-top: 1em;
         padding-bottom: 1em;
@@ -19,13 +21,11 @@
             line-height: 1.25em;
         }
         p {
-            font-size: 1.5em;
-            line-height: 1.333333em;
+            .mixin_font_standard;
         }
         > footer {
             p {
-                font-size: 1.2em;
-                line-height: 1.25em;
+                .mixin_font_subtext;
             }
         }
     }
