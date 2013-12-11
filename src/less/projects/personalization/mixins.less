@@ -4,39 +4,117 @@
 // global_mixins.less
 /* ------------------------------------------ */
 
-.evidence_circle {
+// creates evidence circles
+[data-evidence-circle] {
     display: block;
     width: (@font-size-base * 2);
     height: (@font-size-base * 2);
     .rounded_corners(50%);
-
-    &.evidence_circle_passed {
-        background-color: #6C6;
-    }
-    &.evidence_circle_positive {
-        background-color: #C6C;
-    }
-    &.evidence_circle_doubtful {
-        background-color: #999;
-    }
-    &.evidence_circle_failed {
-        background-color: #C66;
-    }
 }
-.match_strength {
+[data-evidence-circle="passed"] {
+    background-color: #6C6;
+}
+[data-evidence-circle="positive"] {
+    background-color: #C6C;
+}
+[data-evidence-circle="doubtful"] {
+    background-color: #999;
+}
+[data-evidence-circle="failed"] {
+    background-color: #C66;
+}
+
+// defines strong match
+[data-match-strength] {
     display: block;
     width: (@font-size-base * 2);
     height: (@font-size-base * 2);
     .rounded_corners(0.4em);
-    border: 0.2em solid #666;
+    border: 0.2em solid @mwh_grey_button;
+}
+[data-match-strength="strong"] {
+    background-color: @mwh_color_highlight;
+}
+[data-match-strength="moderate"] {
+    background-color: #FFF;
+}
+[data-match-strength="weak"] {
+    background-color: #CCC;
+}
 
-    &.match_strength_strong {
-        background-color: @mwh_color_highlight;
+// for effectiveness radial gauges
+[data-effectiveness-gauge] {
+    display: block;
+    width: (@font-size-base * 2);
+    height: (@font-size-base * 2);
+    .rounded_corners(50%);
+    background-color: @mwh_grey_border;
+}
+
+// for eligibibility and insurance coverage
+[data-eligibility-coverage] {
+    display: block;
+    // width: (@font-size-base * 2);
+    // height: (@font-size-base * 2);
+    // .rounded_corners(50%);
+    font-size: (@font-size-base * 2);
+    line-height: @font-size-base;
+    width: @font-size-base;
+}
+[data-eligibility-coverage="true"] {
+    color: @mwh_color_supplement;
+}
+[data-eligibility-coverage="false"] {
+    color: @mwh_color_links;
+}
+
+// for out-of-pocket cost calculator
+[data-out-of-pocket-cost] {
+    display: block;
+    overflow: auto;
+
+    span {
+        float: left;
+        display: block;
+        width: 2em;
+        height: 2em;
+        margin-right: (@font-size-base * 0.25);
+        border: 0.2em solid @mwh_grey_active;
+        .rounded_corners(50%);
     }
-    &.match_strength_moderate {
-        background-color: #FFF;
+}
+.out_of_pocket_icon_replacement {
+        font-size: (@font-size-base * 2);
+        line-height: @font-size-base;
+        width: @font-size-base;
+        height: @font-size-base;
+        border: 0 none;
+        color: @mwh_grey_active;
+        .icon-cost;
+}
+[data-out-of-pocket-cost="1"] {
+    span:first-child {
+        .out_of_pocket_icon_replacement;
     }
-    &.match_strength_weak {
-        background-color: #CCC;
+}
+[data-out-of-pocket-cost="2"] {
+    span:first-child, span:first-child + span {
+        .out_of_pocket_icon_replacement;
+    }
+}
+[data-out-of-pocket-cost="3"] {
+    span:first-child, span:first-child + span, span:first-child + span + span {
+        .out_of_pocket_icon_replacement;
+    }
+}
+[data-out-of-pocket-cost="4"] {
+    span:first-child, span:first-child + span, span:first-child + span + span,
+    span:first-child + span + span + span {
+        .out_of_pocket_icon_replacement;
+    }
+}
+[data-out-of-pocket-cost="5"] {
+    span {
+        .out_of_pocket_icon_replacement;
     }
 }

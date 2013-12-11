@@ -6,14 +6,52 @@
 #personalization_list {
     table {
         td {
-            .evidence_circle, .match_strength {
+            [data-evidence-circle], [data-match-strength] {
                 margin: 0 auto;
+            }
+            p {
+                padding-top: (@font-size-base * 0.25);
             }
         }
         p {
             .mixin_font_subtext;
             margin-bottom: 0;
-            padding-top: (@font-size-base * 0.25);
+        }
+        [data-effectiveness-gauge] {
+            float: left;
+            margin-right: (@font-size-base * 1);
+        }
+    }
+    th {
+        [data-sort="ascending"] {
+            span {
+                 .icon-arrow-triangle-up;
+            }
+        }
+        [data-sort="descending"] {
+            span {
+                 .icon-arrow-triangle-down;
+            }
+        }
+        a {
+            &[data-active="true"] {
+            }
+            &[data-active="false"] {
+                color: @mwh_color_text;
+            }
+        }
+    }
+    tbody {
+        tr {
+            // clicking on table rows will load the treatments
+            &:hover {
+                background-color: @mwh_grey_disabled;
+                cursor: pointer;
+
+                p {
+                    color: @mwh_color_links;
+                }
+            }
         }
     }
 
