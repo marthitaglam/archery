@@ -1,5 +1,17 @@
 /* Personalization Imports ------------------ */
 // This file imports all the LESS files for Personalization.
+//
+// Personalization Essentially has 3 views:
+// 1. Bullseye
+// 2. List (Table)
+// 3. Treatment Overview (long-form description)
+//
+// Both the Bulleye and the List views can contain in the article section only
+// the following:
+// 1. The legend, OR
+// 2. Treatment Summary, OR
+// 3. Survey (personalization)
+//
 /* ------------------------------------------ */
 
 // mixins to be used specifically for personalization
@@ -11,8 +23,14 @@
 // shell for layout in Personalization
 @import "personalization_shell.less";
 
+// creates the bullseye view
+@import "bullseye.less";
+
 // creates the list view (table)
 @import "list_view.less";
 
 // Treatment summary when user clicks for description
 @import "treatment_overview.less";
+
+// Forms, likert, and other components for survey
+@import "survey.less";
