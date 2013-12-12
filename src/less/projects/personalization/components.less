@@ -3,6 +3,28 @@
 // merit having its own LESS file
 /* ------------------------------------------ */
 
+// the buttons that toggle between bullseye and list view
+#bulleye_list_toggle {
+    button {
+        .mixin_font_subheading;
+        padding: (@font-size-base * 0.25) (@font-size-base * 1);
+
+        span {
+            display: block;
+            float: left;
+            margin-right: (@font-size-base * 0.25);
+        }
+    }
+    button[data-selected="true"] {
+        color: #FFF;
+        background-color: @mwh_color_links;
+    }
+    button[data-selected="false"] {
+        color: @mwh_color_text;
+        background-color: @mwh_grey_disabled;
+    }
+}
+
 // Legend Tables
 .personalization_legend {
 
@@ -10,22 +32,40 @@
         .mixin_font_standard;
         font-weight: bold;
     }
-
+    h4 {
+        .mixin_font_standard;
+    }
     figure {
         margin: 0 0 @font-size-base 0;
         clear: both;
         overflow: auto;
 
-        .evidence_circle, .match_strength {
+        [data-evidence-circle], [data-match-strength],
+        [data-effectiveness-gauge], [data-eligibility-coverage] {
             float: left;
             margin-right: @font-size-base;
+        }
+        [data-eligibility-coverage] {
+            margin-right: (@font-size-base * 0.5);
         }
         figcaption {
             float: left;
 
             p {
-                padding-top: (@font-size-base * 0.25);
+                // padding-top: (@font-size-base * 0.25);
             }
         }
     }
+    &.personalization_legend_horizontal {
+        figure {
+            clear: none;
+        }
+    }
+    small + figure {
+        padding-top: (@font-size-base * 0.5);
+    }
+}
+.personalization_icon_fact {
+
+
 }
