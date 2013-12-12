@@ -5,9 +5,10 @@
 
 // the toggle between explore (bullseye) and personalize (survey)
 #explore_personalize_toggle {
-    margin-bottom: @font-size-base;
+
     li {
         padding: 0;
+        height: (@font-size-base * 5);
     }
     a {
         display: block;
@@ -66,10 +67,15 @@
         float: left;
         display: block;
     }
+    + hr {
+        margin-top: 0;
+    }
 }
 
 // the buttons that toggle between bullseye and list view
 #bulleye_list_toggle {
+    height: (@font-size-base * 5);
+
     button {
         .mixin_font_subheading;
         padding: (@font-size-base * 0.25) (@font-size-base * 1);
@@ -81,7 +87,7 @@
         }
     }
     button[data-selected="true"] {
-        color: #FFF;
+        color: @mwh_color_base;
         background-color: @mwh_color_links;
     }
     button[data-selected="false"] {
