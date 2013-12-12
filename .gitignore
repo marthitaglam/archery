@@ -3,3 +3,4 @@ build
 .tmp
 src/components
 test
+npm-debug.log
