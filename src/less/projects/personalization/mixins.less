@@ -4,23 +4,23 @@
 // global_mixins.less
 /* ------------------------------------------ */
 
-// creates evidence circles
-[data-evidence-circle] {
+// creates evidence bubbles
+[data-evidence-bubble] {
     display: block;
     width: (@font-size-base * 2);
     height: (@font-size-base * 2);
     .rounded_corners(50%);
 }
-[data-evidence-circle="passed"] {
+[data-evidence-bubble="passed"] {
     background-color: #6C6;
 }
-[data-evidence-circle="positive"] {
+[data-evidence-bubble="positive"] {
     background-color: #C6C;
 }
-[data-evidence-circle="doubtful"] {
+[data-evidence-bubble="doubtful"] {
     background-color: #999;
 }
-[data-evidence-circle="failed"] {
+[data-evidence-bubble="failed"] {
     background-color: #C66;
 }
 

@@ -15,8 +15,9 @@
 
 // standard font size and leading
 @internal_font_standard_leading: (@font-size-base * 1.333333);
+@variable_font_standard_multiplier: 15;
 .mixin_font_standard {
-    font-size: (@font-size-base * 1.5);
+    font-size: (@font-size-base * (@variable_font_standard_multiplier / 10));
     line-height: @internal_font_standard_leading;
     margin: 0;
 }
@@ -36,8 +37,9 @@
 }
 // for smaller text such as notes, annotations, table entries
 @internal_font_subtext_leading: (@font-size-base * 1.25);
+@variable_font_subtext_multiplier: 12;
 .mixin_font_subtext {
-    font-size: (@font-size-base * 1.2);
+    font-size: (@font-size-base * (@variable_font_subtext_multiplier / 10));
     line-height: @internal_font_subtext_leading;
 }
 .mixin_font_standard_subtext {

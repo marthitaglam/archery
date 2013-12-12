@@ -8,7 +8,42 @@
 // creates the progress bar during the survey
 #personalization_survey_progress {
     position: relative;
-    padding: @font-size-base (@grid-gutter-width * 0.5);
+    height: 8em;
+    padding: (@font-size-base * 1.5) (@grid-gutter-width * 0.5) 0;
     margin: 0 0 @font-size-base 0;
     background-color: @mwh_grey_disabled;
+    .rounded_corners(@font-size-base * 0.5);
+
+    p {
+        .mixin_font_subtext;
+    }
+    // modification of bootstrap progress bar
+    .progress {
+        height: (@font-size-base * 1.5);
+        margin-bottom: @font-size-base;
+        position: relative;
+        overflow: visible;
+    }
+    // Bar of progress
+    .progress-bar {
+        font-size: (@font-size-base * 1.5);
+        line-height: @line-height-computed;
+        text-align: center;
+    }
+    .progress_labels {
+        position: absolute;
+        right: 0;
+        left: 0;
+        overflow: auto;
+
+        span {
+            float: left;
+            border-left: (@font-size-base / @variable_font_subtext_multiplier) solid @mwh_color_text;
+            padding-top: (@font-size-base * 1.5);
+            display: block;
+            .mixin_font_subtext;
+            width: 33.3333%;
+            padding-left: ((@font-size-base / @variable_font_subtext_multiplier) * 3);
+        }
+    }
 }
