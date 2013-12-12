@@ -3,6 +3,71 @@
 // merit having its own LESS file
 /* ------------------------------------------ */
 
+// the toggle between explore (bullseye) and personalize (survey)
+#explore_personalize_toggle {
+    margin-bottom: @font-size-base;
+    li {
+        padding: 0;
+    }
+    a {
+        display: block;
+        overflow: auto;
+        padding: (@font-size-base * 0.5) (@font-size-base * 1.5);
+        .rounded_corners((@font-size-base * 0.5));
+
+        &[data-selected="true"], &[data-selected="false"]:hover {
+            color: @mwh_color_links;
+        }
+        &[data-selected="false"], &[data-selected="true"]:hover {
+            color: @mwh_grey_border;
+        }
+        span:first-child {
+            width: 3em;
+            height: 3em;
+            margin: 0 0.333333em 0 0;
+            font-size: @font-size-base;
+            background-image: url("/static/placeholders/explore_personalization_toggle_sprites.png");
+            background-size: 3em 12em;
+            background-repeat: no-repeat;
+        }
+        span:first-child + span {
+            .mixin_font_subheading;
+            line-height: 1.5em;
+            margin: 0;
+        }
+    }
+    // first child is bullseye
+    #toggle_explore {
+        [data-selected="true"], [data-selected="false"]:hover {
+            span:first-child {
+                background-position: 0 -3em;
+            }
+        }
+        [data-selected="false"], [data-selected="true"]:hover {
+            span {
+                background-position: 0 0;
+            }
+        }
+    }
+    // second child is survey
+    #toggle_personalize {
+        [data-selected="true"], [data-selected="false"]:hover {
+            span:first-child {
+                background-position: 0 -9em;
+            }
+        }
+        [data-selected="false"], [data-selected="true"]:hover {
+            span {
+                background-position: 0 -6em;
+            }
+        }
+    }
+    span {
+        float: left;
+        display: block;
+    }
+}
+
 // the buttons that toggle between bullseye and list view
 #bulleye_list_toggle {
     button {
